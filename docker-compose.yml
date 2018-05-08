@@ -1,0 +1,22 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:9.5
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./speakerinnen_data:/var/lib/postgresql/data
+  speakerinnen_liste:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/speakerinnen_liste
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+  
+
