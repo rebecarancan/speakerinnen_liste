@@ -1,19 +1,21 @@
-
 default: &default
   adapter: postgresql
   encoding: unicode
   pool: 25
-  host: localhost
+  port: 5432
+  host: postgres
 
 development:
   <<: *default
-  database: YOUR-DATABASE-NAME
-  password: YOUR-DATABASE-USERNAME-PASSWORD
+  database: speakerinnen_development
+  password: postgres
+  username: postgres
 
 test:
   <<: *default
-  database: YOUR-DATABASE-NAME
-  password: YOUR-DATABASE-USERNAME-PASSWORD
+  database: speakerinnen_test
+  password: postgres
+  username: postgres
 
 staging:
   <<: *default
