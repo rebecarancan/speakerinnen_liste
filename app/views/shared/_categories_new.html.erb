@@ -1,8 +1,8 @@
-<ul>
+<div class="col-12">
   <% @categories.each_with_index do |category, i| %>
-    <li class="startpage-categories__list-items category_item_<%=i%>" >
+    <div class="startpage-categories__list-items category_item_<%=i%>" >
       <%= category_link category %>
       <%= category_profiles_count category.id %>
-    </li>
+    </div>
   <% end %>
-</ul>
+</div>
