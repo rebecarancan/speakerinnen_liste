@@ -44,8 +44,8 @@ gem 'friendly_id'
 
 gem 'active_model_serializers'
 
-gem 'elasticsearch-model', '~> 2.0'
-gem 'elasticsearch-rails', '~> 6.0'
+gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: '5.x'
+gem 'elasticsearch-rails', github: 'elastic/elasticsearch-rails', branch: '5.x'
 gem 'record_tag_helper', '~> 1.0'
 gem 'exception_notification'
 gem 'honeycomb-beeline'
@@ -82,7 +82,7 @@ end
 
 group :test do
   gem 'database_cleaner', '~> 1.7.0'
-  gem 'elasticsearch-extensions', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git', ref: '2.x'
+  gem 'elasticsearch-extensions', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git', ref: '5.x'
   gem 'factory_bot_rails'
   gem 'minitest', '5.11.3' # remove this after upgrading rails from 5.0.0
   gem 'poltergeist', '1.18.1'
