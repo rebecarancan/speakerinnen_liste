@@ -5,12 +5,13 @@ rvm: 2.4.2
 bundler_args: --without development production
 
 env:
-  - ELASTICSEARCH_URL=http://localhost:9250 ES_VERSION=2.4.5 ES_DOWNLOAD_URL=https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz  TEST_CLUSTER_COMMAND=/tmp/elasticsearch-${ES_VERSION}/bin/elasticsearch RAILS_ENV=test
+
+  - ELASTICSEARCH_URL=http://localhost:9250 ES_VERSION=5.6.15 ES_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz TEST_CLUSTER_COMMAND=/tmp/elasticsearch-${ES_VERSION}/bin/elasticsearch RAILS_ENV=test
 
 before_install:
   - gem update --system
-  - gem install bundler  
-  - curl -sS https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz | tar xz -C /tmp
+  - gem install bundler
+  - curl -sS https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz | tar xz -C /tmp
 
 services:
   - postgresql
