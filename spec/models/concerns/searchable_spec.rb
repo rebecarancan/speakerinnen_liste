@@ -97,8 +97,8 @@ describe Searchable, elasticsearch: true do
 
     it 'shows results that are a partial match with more than one search input' do
       Profile.__elasticsearch__.refresh_index!
-      expect(Profile.__elasticsearch__.search('ada curie').results[0].fullname).to eq('Marie Curie')
-      expect(Profile.__elasticsearch__.search('ada curie').results[1].fullname).to eq('Ada Lovelace')
+      expect(Profile.__elasticsearch__.search('ada curie').results[0].fullname).to eq('Ada Lovelace')
+      expect(Profile.__elasticsearch__.search('ada curie').results[1].fullname).to eq('Marie Curie')
     end
 
     it 'does not return unpublished profile' do

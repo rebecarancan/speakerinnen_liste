@@ -1,30 +1,22 @@
 GIT
   remote: git://github.com/elastic/elasticsearch-rails.git
-  revision: bfdd2243f0de298547b2dc199e9a671cf72ccde6
-  branch: 5.x
+  revision: c73c5a468aa475b898e82409442debd6f3ff1d3a
+  branch: 6.x
   specs:
-    elasticsearch-model (5.1.0)
+    elasticsearch-model (6.0.0)
       activesupport (> 3)
-      elasticsearch (~> 5)
+      elasticsearch (> 1)
       hashie
-    elasticsearch-rails (5.1.0)
+    elasticsearch-rails (6.0.0)
 
 GIT
   remote: git://github.com/elasticsearch/elasticsearch-ruby.git
-  revision: 86a36ec0db704b2a62dd4d5fe9edf887625b1826
-  ref: 5.x
+  revision: faf5153c2026dd29b64ee09761326782f1de2890
+  ref: 6.x
   specs:
-    elasticsearch (5.0.5)
-      elasticsearch-api (= 5.0.5)
-      elasticsearch-transport (= 5.0.5)
-    elasticsearch-api (5.0.5)
-      multi_json
-    elasticsearch-extensions (0.0.22)
+    elasticsearch-extensions (0.0.31)
       ansi
-      ruby-prof
-    elasticsearch-transport (5.0.5)
-      faraday
-      multi_json
+      elasticsearch
 
 GIT
   remote: https://github.com/globalize/globalize
@@ -177,6 +169,14 @@ GEM
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dry-inflector (0.1.2)
+    elasticsearch (7.0.0)
+      elasticsearch-api (= 7.0.0)
+      elasticsearch-transport (= 7.0.0)
+    elasticsearch-api (7.0.0)
+      multi_json
+    elasticsearch-transport (7.0.0)
+      faraday
+      multi_json
     erubi (1.8.0)
     exception_notification (4.3.0)
       actionmailer (>= 4.0, < 6)
@@ -608,7 +608,6 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
-    ruby-prof (0.17.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
